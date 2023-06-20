@@ -38,7 +38,7 @@ function populate_affiliatons(html_id, details){
 }
 
 $(document).ready(function () {
-  $('#meta-desc').attr('content', project_name);
+  $('#meta-desc').attr('content', `Web home for ${project_name} @ ${conference_details[0]}`);
   $('#title').html(project_name);
   $('#project-name').html(`${proj_small_caps}${project_name}`)
   $('#conference-details').html(`<a href="${conference_details[1]}" target="_blank"><p class="is-2">${conference_details[0]}</p></a>`)
