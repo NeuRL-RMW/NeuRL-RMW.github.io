@@ -2,22 +2,24 @@ function log(message) {
   console.log(message);
 }
 
-function populate_people_html(html_id, details){
+function populate_people_html(html_id, details, row_split_idx){
     // content
     let content_html = ``
     for(var i=0; i<details.length; i++) {
       let detail = details[i]
+      let br = (i%row_split_idx==0) ? '<br>' : ''
+      console.log(i, row_split_idx, i%row_split_idx, br)
       content_html += `
       <div class="column">
         <div class="center">
           <img class="${html_id}-image center" src="${detail[1]}">
-          <p> 
+          <div> 
             <a href="${detail[4]}" target="_blank">${detail[0]}</a> <br> 
             ${detail[2]} <br> 
             ${detail[3]} 
-          </p>
+          </div>
         </div>
-      </div>`
+      </div>${br}`
     }
     $(`#${html_id}`).html(content_html)
 }
@@ -45,10 +47,10 @@ $(document).ready(function () {
   $('#workshop-date').html(workshop_date)
   
   // talk content
-  populate_people_html('talk-content', talk_speaker_details)
+  populate_people_html('talk-content', talk_speaker_details, 3)
 
   // organizers content
-  populate_people_html('organizer-content', organizers_details)
+  populate_people_html('organizer-content', organizers_details, 3)
 
   // organizer affiliation content
   // populate_affiliatons('organizer-affiliation-logo-content', org_affiliation_logos)
