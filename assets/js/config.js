@@ -12,9 +12,9 @@ const organizers_details = [
   ['Karthik Desingh', 'assets/images/organizers/karthik_desingh.jpeg', 'Assistant Professor', 'University of Minnesota', 'https://karthikdesingh.com'],
   ['Changhyun Choi', 'assets/images/organizers/Changhyun_Choi.jpg', 'Assistant Professor', 'University of Minnesota', 'https://cse.umn.edu/ece/changhyun-choi'],
   ['Yu Xiang', 'assets/images/organizers/Yu_Xiang.jpg', 'Assistant Professor', 'The University of Texas at Dallas', 'https://yuxng.github.io'],
-  ['Jishnu Jaykumar P.', 'assets/images/organizers/Jishnu-Jaykumar-Padalunkal.jpg', 'PhD Student', 'The University of Texas at Dallas', 'https://jishnujayakumar.github.io'],
-  ['Ninad A. Khargonkar', 'assets/images/organizers/Ninad-Khargonkar.jpg', 'PhD Student', 'The University of Texas at Dallas', 'https://kninad.github.io'],
-  ['Sai Haneesh Allu', 'assets/images/organizers/Sai-Haneesh-Allu.png', 'PhD Student', 'The University of Texas at Dallas', 'https://www.linkedin.com/in/sai-haneesh-allu'],
+  ['Jishnu Jaykumar P.', 'assets/images/organizers/Jishnu-Jaykumar-Padalunkal.jpg', 'PhD <br> Student', 'The University of Texas at Dallas', 'https://jishnujayakumar.github.io'],
+  ['Ninad Khargonkar', 'assets/images/organizers/Ninad-Khargonkar.jpg', 'PhD <br> Student', 'The University of Texas at Dallas', 'https://kninad.github.io'],
+  ['Sai Haneesh Allu', 'assets/images/organizers/Sai-Haneesh-Allu.png', 'PhD <br> Student', 'The University of Texas at Dallas', 'https://www.linkedin.com/in/sai-haneesh-allu'],
 ]
 
 const org_affiliation_logos = [

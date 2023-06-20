@@ -7,19 +7,17 @@ function populate_people_html(html_id, details, row_split_idx){
     let content_html = ``
     for(var i=0; i<details.length; i++) {
       let detail = details[i]
-      let br = (i%row_split_idx==0) ? '<br>' : ''
-      console.log(i, row_split_idx, i%row_split_idx, br)
       content_html += `
-      <div class="column">
+      <div class="column is-variable is-max-desktop">
         <div class="center">
           <img class="${html_id}-image center" src="${detail[1]}">
           <div> 
-            <a href="${detail[4]}" target="_blank">${detail[0]}</a> <br> 
+            <a href="${detail[4]}" target="_blank">${detail[0]}</a> <br>
             ${detail[2]} <br> 
             ${detail[3]} 
           </div>
         </div>
-      </div>${br}`
+      </div>`
     }
     $(`#${html_id}`).html(content_html)
 }
