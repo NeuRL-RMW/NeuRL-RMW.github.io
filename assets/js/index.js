@@ -10,16 +10,18 @@ function populate_people_html(html_id, details, row_split_idx){
       content_html += `
       <div class="column is-variable is-max-desktop">
         <div class="center">
-          <img class="${html_id}-image center" src="${detail[1]}">
+          <img class="display-image center" src="${detail[1]}">
           <div> 
             <a href="${detail[4]}" target="_blank">${detail[0]}</a> <br>
-            ${detail[2]} <br> 
+            ${detail[2]} <br>
             ${detail[3]} 
           </div>
         </div>
       </div>`
     }
     $(`#${html_id}`).html(content_html)
+    // console.log($(`#${html_id}`).html())
+    // $(`#${html_id}`).html($(`#${html_id}`).html() + content_html)
 }
 
 function populate_affiliatons(html_id, details){
@@ -49,10 +51,12 @@ $(document).ready(function () {
   $('#workshop-date').html(workshop_date)
   
   // talk content
-  populate_people_html('talk-content', talk_speaker_details, 3)
+  populate_people_html('talk-content1', talk_speaker_details.slice(0, 3))
+  populate_people_html('talk-content2', talk_speaker_details.slice(3, ))
 
   // organizers content
-  populate_people_html('organizer-content', organizers_details, 3)
+  populate_people_html('organizer-content-1', organizers_details.slice(0, 3))
+  populate_people_html('organizer-content-2', organizers_details.slice(3, ))
 
   // organizer affiliation content
   // populate_affiliatons('organizer-affiliation-logo-content', org_affiliation_logos)

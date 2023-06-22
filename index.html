@@ -82,12 +82,22 @@
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              The field of robotics has made significant advancements in recent years, thanks to the integration of
-              machine learning techniques. In particular, neural representation learning has emerged as a powerful tool
-              for enabling robots to perceive and manipulate their environments effectively. This workshop aims to
-              explore the intersection of neural representation learning and robot manipulation, providing participants
-              with a comprehensive understanding of the latest developments, challenges, and opportunities in this
-              exciting area of research.
+              Representations of scenes and objects play a crucial role in robot manipulation. Traditional ways represent scenes and objects using explicit geometric primitives, such as 3D meshes, 3D point clouds, 3D voxels, etc. These geometric representations have been widely explored in perception, grasp planning and motion planning in manipulation. However, they still have difficulties in handling challenging manipulation scenarios involving unseen objects, articulated objects, or deformable objects. Recently, neural representations of scenes and objects, such as neural radiance fields and deep signed distance fields, have introduced, which demonstrate superior performance on visual rendering and shape reconstruction tasks. Ideally, neural representations can handle arbitrary scenes and objects by encoding them into neural networks. However, how to learn these representations from data and how to utilize them for robot manipulation remain as open questions. 
+              This workshop will represent a great opportunity to bring together experts who are exploring neural representations for robot manipulation, and provide an arena for stimulating discussion and debate on neural representation learning for robot manipulation. Specific questions we aim to address include: 
+              <ul>
+                <li>
+                  What neural representations are useful for robot manipulation?
+                </li>
+                <li>
+                  What should a neural representation capture (geometry, visual appearance, dynamics, etc.) for robot manipulation? 
+                </li>
+                <li>
+                  How to learn and use neural representations for robot manipulation? 
+                </li>
+                <li>
+                  How to benchmark the progress in neural representation learning for robot manipulation? 
+                </li>
+              </ul>
             </p>
           </div>
         </div>
@@ -101,7 +111,8 @@
     <!-- Speakers. -->
     <div class="container is-max-desktop">
       <h2 class="center title is-3">Confirmed Speakers</h2>
-      <div id="talk-content" class="columns is-centered"></div>
+      <div id="talk-content1" class="columns is-centered"></div>
+      <div id="talk-content2" class="columns is-centered"></div>
       <!--/ Speakers. -->
   </section>
 
@@ -109,7 +120,8 @@
     <!-- Organizers. -->
     <div class="container is-max-desktop">
       <h2 class="center title is-3">Organizers</h2>
-      <div id="organizer-content" class="columns is-centered"></div>
+      <div id="organizer-content-1" class="columns is-centered"></div>
+      <div id="organizer-content-2" class="columns is-centered"></div>
       <div id="organizer-affiliation-logo-content" class="columns is-centered"></div>
       <!--/ Organizers. -->
   </section>
