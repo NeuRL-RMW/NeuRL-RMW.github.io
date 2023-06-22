@@ -41,7 +41,11 @@ $(document).ready(function () {
   $('#meta-desc').attr('content', `Web home for ${project_name} @ ${conference_details[0]}`);
   $('#title').html(project_name);
   $('#project-name').html(`${proj_small_caps}${project_name}`)
-  $('#conference-details').html(`<a href="${conference_details[1]}" target="_blank"><p class="is-2">${conference_details[0]}</p></a>`)
+  $('#conference-details').html(`
+  <a href="${conference_details[1]}" target="_blank">
+  <img src="${conference_details[3]}" width="300px" height="300px">
+  <p class="is-2">${conference_details[2]}</p>
+  </a>`)
   $('#workshop-date').html(workshop_date)
   
   // talk content
@@ -52,6 +56,38 @@ $(document).ready(function () {
 
   // organizer affiliation content
   // populate_affiliatons('organizer-affiliation-logo-content', org_affiliation_logos)
+
+
+
+  // const schedule = [
+  //   'intro',
+  //   'inv-talk',
+  //   'break', 
+  //   'spot-ppt',
+  //   'spot-poster',
+  //   'lunch-break',
+  //   'disc',
+  // ]
+
+  // populate schedule
+  let schedule_html = ``
+
+  schedule.forEach(schedule_entry => {
+    let icon_html = ``
+    let effect = `` 
+    if(['lunch-break', 'break'].includes(schedule_entry[0])){
+      if (schedule_entry[0] == 'lunch-break'){
+        icon_html = `<i class="fas fa-utensils icon" style="position: relative;top: 5px;"></i>`
+      }
+    effect = `notification is-warning is-light`
+    }
+    schedule_html += `
+      <tr class="${effect}">
+        <td>${schedule_entry[1]}</td><td>${schedule_entry[2]}<span class="icon">${icon_html}</span></td>
+      </tr>`
+  });
+  $('#schedule-table-body').html(schedule_html)
+
 
   $('body').append(`
     <footer class="footer">
