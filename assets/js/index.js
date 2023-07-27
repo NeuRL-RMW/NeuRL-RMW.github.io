@@ -46,7 +46,8 @@ $(document).ready(function () {
   $('#conference-details').html(`
   <a href="${conference_details[1]}" target="_blank">
   <img src="${conference_details[3]}" width="300px" height="300px">
-  <p class="is-2">${conference_details[2]}</p>
+  <p class="is-2"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+  ${conference_details[2]}</p>
   </a>`)
   $('#workshop-date').html(workshop_date)
   
@@ -79,15 +80,18 @@ $(document).ready(function () {
   schedule.forEach(schedule_entry => {
     let icon_html = ``
     let effect = `` 
-    if(['lunch-break', 'break'].includes(schedule_entry[0])){
+    if(['lunch-break', 'coffee-break'].includes(schedule_entry[0])){
       if (schedule_entry[0] == 'lunch-break'){
-        icon_html = `<i class="fas fa-utensils icon" style="position: relative;top: 5px;"></i>`
+        icon_html = `<i class="fas fa-utensils icon" style="position: relative;top: 5px; margin-left:5px"></i>`
+      }
+      if (schedule_entry[0] == 'coffee-break'){
+        icon_html = `<i class="fas fa-coffee icon" style="position: relative;top: 5px; margin-left:5px"></i>`
       }
     effect = `notification is-warning is-light`
     }
     schedule_html += `
       <tr class="${effect}">
-        <td>${schedule_entry[1]}</td><td>${schedule_entry[2]}<span class="icon">${icon_html}</span></td>
+        <td>${schedule_entry[1]}</td><td>${schedule_entry[2]}${icon_html}</td>
       </tr>`
   });
   $('#schedule-table-body').html(schedule_html)
