@@ -22,6 +22,11 @@ const organizers_details = [
   ['Alireza Rezazadeh', 'assets/images/organizers/Alireza-Rezazadeh.png', 'PhD Student', 'University of Minnesota, Twin Cities', 'https://www.alireza.page'],
 ]
 
+const accepted_presentations = [
+  ["FullName-1", "#", "https://bulma.io/images/placeholders/128x128.png", "Designation", "Affiliation", "Presentation Title", "Spotlight"],
+  ["FullName-2", "#", "https://bulma.io/images/placeholders/128x128.png", "Designation", "Affiliation", "Presentation Title", ""],
+]
+
 const org_affiliation_logos = [
   'assets/images/affiliation-logos/um-logo.png',
   'assets/images/affiliation-logos/utd-logo.png',

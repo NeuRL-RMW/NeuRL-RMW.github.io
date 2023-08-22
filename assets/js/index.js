@@ -39,6 +39,42 @@ function populate_affiliatons(html_id, details){
   $(`#${html_id}`).html(content_html)
 }
 
+
+function populate_accepted_presentations(html_id, details){
+  // content
+  let content_html = ``
+  let spotlight_tag_html = ``
+  let curr_detail = null
+
+  for(var i=0; i<details.length; i++) {
+    curr_detail = details[i]
+    spotlight_tag_html = ``
+    if(curr_detail[6] == "Spotlight"){
+      spotlight_tag_html = `<span class="tag is-warning">${curr_detail[6]}</span>`
+    }
+    content_html += `
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <img src="${curr_detail[2]}">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>${curr_detail[0]}</strong> <small><a href="${curr_detail[1]}" target="_blank">Webpage</a></small>
+            <br>
+            ${curr_detail[3]}, ${curr_detail[4]}
+            <br>
+            ${curr_detail[5]}&nbsp;${spotlight_tag_html}
+          </p>
+        </div>
+      </div>
+    </article>`
+  }
+  $(`#${html_id}`).html(content_html)
+}
+
 $(document).ready(function () {
   $('#meta-desc').attr('content', `Web home for ${project_name} @ ${conference_details[0]}`);
   $('#title').html(project_name);
@@ -58,6 +94,9 @@ $(document).ready(function () {
   // organizers content
   populate_people_html('organizer-content-1', organizers_details.slice(0, 3))
   populate_people_html('organizer-content-2', organizers_details.slice(3, ))
+
+  // accepted presentations
+  populate_accepted_presentations("ppt-list", accepted_presentations)
 
   // organizer affiliation content
   // populate_affiliatons('organizer-affiliation-logo-content', org_affiliation_logos)
