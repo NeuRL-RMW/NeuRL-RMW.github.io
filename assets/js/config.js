@@ -5,7 +5,7 @@ const workshop_date = `November 6, 2023`
 
 const talk_speaker_details = [
   ['Shuran Song', './assets/images/talks/shuran_song.jpg', 'Assistant Professor', 'Columbia University', 'https://www.cs.columbia.edu/~shurans'],
-  ['David Held', './assets/images/talks/david_held.jpg', 'Assistant Professor', 'Carnegie Mellon University', 'http://davheld.github.io'],
+  ['David Held', './assets/images/talks/david_held.jpg', 'Associate Professor', 'Carnegie Mellon University', 'http://davheld.github.io'],
   ['Georgia Chalvatzaki', './assets/images/talks/Georgia-Chalvatzaki.jpg', 'Assistant Professor', 'TU Darmstadt', 'https://gchal.github.io'],
   ['Pete Florence', './assets/images/talks/pete-florence.png', 'Senior Research Scientist', 'Google Deepmind', 'https://www.peteflorence.com'],
   ['Chris Paxton', './assets/images/talks/chris-paxton.jpeg', 'Research Scientist', 'Meta AI', 'https://cpaxton.github.io'],
