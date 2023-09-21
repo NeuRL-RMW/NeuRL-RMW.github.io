@@ -10,16 +10,18 @@ function populate_people_html(html_id, details, row_split_idx){
       content_html += `
       <div class="column is-variable is-max-desktop">
         <div class="center">
-          <img class="${html_id}-image center" src="${detail[1]}">
+          <img class="display-image center" src="${detail[1]}">
           <div> 
             <a href="${detail[4]}" target="_blank">${detail[0]}</a> <br>
-            ${detail[2]} <br> 
+            ${detail[2]} <br>
             ${detail[3]} 
           </div>
         </div>
       </div>`
     }
     $(`#${html_id}`).html(content_html)
+    // console.log($(`#${html_id}`).html())
+    // $(`#${html_id}`).html($(`#${html_id}`).html() + content_html)
 }
 
 function populate_affiliatons(html_id, details){
@@ -37,21 +39,102 @@ function populate_affiliatons(html_id, details){
   $(`#${html_id}`).html(content_html)
 }
 
+
+function populate_accepted_presentations(html_id, details){
+  // content
+  let content_html = ``
+  let spotlight_tag_html = ``
+  let curr_detail = null
+
+  for(var i=0; i<details.length; i++) {
+    curr_detail = details[i]
+    spotlight_tag_html = ``
+    if(curr_detail[6] == "Spotlight"){
+      spotlight_tag_html = `<span class="tag is-warning">${curr_detail[6]}</span>`
+    }
+    content_html += `
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <img src="${curr_detail[2]}">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>${curr_detail[0]}</strong> <small><a href="${curr_detail[1]}" target="_blank">Webpage</a></small>
+            <br>
+            ${curr_detail[3]}, ${curr_detail[4]}
+            <br>
+            ${curr_detail[5]}&nbsp;${spotlight_tag_html}
+          </p>
+        </div>
+      </div>
+    </article>`
+  }
+  $(`#${html_id}`).html(content_html)
+}
+
 $(document).ready(function () {
   $('#meta-desc').attr('content', `Web home for ${project_name} @ ${conference_details[0]}`);
   $('#title').html(project_name);
   $('#project-name').html(`${proj_small_caps}${project_name}`)
-  $('#conference-details').html(`<a href="${conference_details[1]}" target="_blank"><p class="is-2">${conference_details[0]}</p></a>`)
+  $('#conference-details').html(`
+  <a href="${conference_details[1]}" target="_blank">
+  <img src="${conference_details[3]}" width="300px" height="300px">
+  <p class="is-2"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+  ${conference_details[2]}</p>
+  </a>`)
   $('#workshop-date').html(workshop_date)
   
   // talk content
-  populate_people_html('talk-content', talk_speaker_details, 3)
+  populate_people_html('talk-content1', talk_speaker_details.slice(0, 3))
+  populate_people_html('talk-content2', talk_speaker_details.slice(3, ))
 
   // organizers content
-  populate_people_html('organizer-content', organizers_details, 3)
+  populate_people_html('organizer-content-1', organizers_details.slice(0, 3))
+  populate_people_html('organizer-content-2', organizers_details.slice(3, ))
+
+  // accepted presentations
+  populate_accepted_presentations("ppt-list", accepted_presentations)
 
   // organizer affiliation content
   // populate_affiliatons('organizer-affiliation-logo-content', org_affiliation_logos)
+
+
+
+  // const schedule = [
+  //   'intro',
+  //   'inv-talk',
+  //   'break', 
+  //   'spot-ppt',
+  //   'spot-poster',
+  //   'lunch-break',
+  //   'disc',
+  // ]
+
+  // populate schedule
+  let schedule_html = ``
+
+  schedule.forEach(schedule_entry => {
+    let icon_html = ``
+    let effect = `` 
+    if(['lunch-break', 'coffee-break'].includes(schedule_entry[0])){
+      if (schedule_entry[0] == 'lunch-break'){
+        icon_html = `<i class="fas fa-utensils icon" style="position: relative;top: 5px; margin-left:5px"></i>`
+      }
+      if (schedule_entry[0] == 'coffee-break'){
+        icon_html = `<i class="fas fa-coffee icon" style="position: relative;top: 5px; margin-left:5px"></i>`
+      }
+    effect = `notification is-warning is-light`
+    }
+    schedule_html += `
+      <tr class="${effect}">
+        <td>${schedule_entry[1]}</td><td>${schedule_entry[2]}${icon_html}</td>
+      </tr>`
+  });
+  $('#schedule-table-body').html(schedule_html)
+
 
   $('body').append(`
     <footer class="footer">

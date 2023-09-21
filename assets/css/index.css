@@ -64,7 +64,7 @@ font-style: italic;
   text-align: center !important;
 }
 
-.talk-content-image, .organizer-content-image, .organizer-affiliation-logo-content-image {
+.display-image, .organizer-affiliation-logo-content-image {
   width: 9rem !important; /* Adjust the desired width */
   height: 9rem !important; /* Set the same value as width to make it a square */
   object-fit: cover !important; /* Preserve the image's aspect ratio and cover the container */
