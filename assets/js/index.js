@@ -56,17 +56,17 @@ function populate_accepted_presentations(html_id, details){
     <article class="media">
       <figure class="media-left">
         <p class="image is-64x64">
-          <img src="${curr_detail[2]}">
+          <img class="is-rounded" src="${curr_detail[2]}">
         </p>
       </figure>
       <div class="media-content">
         <div class="content">
           <p>
-            <strong>${curr_detail[0]}</strong> <small><a href="${curr_detail[1]}" target="_blank">Webpage</a></small>
+            <a href="${curr_detail[1]}" target="_blank"><strong>${curr_detail[0]}</strong></a>&nbsp;${spotlight_tag_html}
             <br>
             ${curr_detail[3]}, ${curr_detail[4]}
             <br>
-            ${curr_detail[5]}&nbsp;${spotlight_tag_html}
+            <small class='bold has-text-dark'>${curr_detail[5]}</small>
           </p>
         </div>
       </div>
