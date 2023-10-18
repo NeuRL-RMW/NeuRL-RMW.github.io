@@ -6,7 +6,7 @@ const workshop_date = `November 6, 2023`
 const talk_speaker_details = [
   ['Shuran Song', './assets/images/talks/shuran_song.jpg', 'Assistant Professor', 'Stanford University', 'https://shurans.github.io/'],
   ['David Held', './assets/images/talks/david_held.jpg', 'Associate Professor', 'Carnegie Mellon University', 'http://davheld.github.io'],
-  ['Georgia Chalvatzaki', './assets/images/talks/Georgia-Chalvatzaki.jpg', 'Assistant Professor', 'TU Darmstadt', 'https://gchal.github.io'],
+  ['Georgia Chalvatzaki', './assets/images/talks/Georgia-Chalvatzaki.jpg', 'Assistant Professor', 'TU Darmstadt', 'https://irosalab.com/people/georgia-chalvatzaki/'],
   ['Pete Florence', './assets/images/talks/pete-florence.png', 'Senior Research Scientist', 'Google Deepmind', 'https://www.peteflorence.com'],
   ['Chris Paxton', './assets/images/talks/chris-paxton.jpeg', 'Research Scientist', 'Meta AI', 'https://cpaxton.github.io'],
   ['Chad Jenkins', './assets/images/talks/chad_jenkins.jpg', 'Professor', 'University of Michigan', 'https://robotics.umich.edu/profile/chad-jenkins'],
@@ -18,7 +18,7 @@ const organizers_details = [
   ['Yu Xiang', 'assets/images/organizers/Yu_Xiang.jpg', 'Assistant Professor', 'The University of Texas at Dallas', 'https://yuxng.github.io'],
   ['Jishnu Jaykumar Padalunkal', 'assets/images/organizers/Jishnu-Jaykumar-Padalunkal.jpg', 'PhD Student', 'The University of Texas at Dallas', 'https://jishnujayakumar.github.io'],
   ['Ninad Khargonkar', 'assets/images/organizers/Ninad-Khargonkar.jpg', 'PhD Student', 'The University of Texas at Dallas', 'https://kninad.github.io'],
-  ['Sai Haneesh Allu', 'assets/images/organizers/Sai-Haneesh-Allu.png', 'PhD Student', 'The University of Texas at Dallas', 'https://www.linkedin.com/in/sai-haneesh-allu'],
+  ['Sai Haneesh Allu', 'assets/images/organizers/Sai-Haneesh-Allu.webp', 'PhD Student', 'The University of Texas at Dallas', 'https://www.linkedin.com/in/sai-haneesh-allu'],
   ['Alireza Rezazadeh', 'assets/images/organizers/Alireza-Rezazadeh.png', 'PhD Student', 'University of Minnesota, Twin Cities', 'https://www.alireza.page'],
 ]
 
@@ -34,19 +34,17 @@ const org_affiliation_logos = [
 
 
 const schedule = [
-  ['intro', '08:30 - 08:35', 'Introduction'],
-  ['inv-talk', '08:35 - 09:00', 'Invited Talk'],
+  ['intro', '08:45 - 09:00', 'Introduction'],
   ['inv-talk', '09:00 - 09:30', 'Invited Talk'],
-  ['inv-talk', '09:30 - 10:00', 'Invited Talk'], 
-  ['spot-ppt', '10:00 - 10:30', 'Spotlight Presentations'], 
-  ['coffee-break', '10:30 - 11:00', 'Coffee Break'],
-  ['inv-talk', '11:00 - 11:30', 'Invited Talk'],
-  ['spot-poster', '11:30 - 12:30', 'Spotlight Posters | Muse 1'],
+  ['inv-talk', '09:30 - 10:30', 'Spotlight Presentations'],
+  ['coffee-break', '10:30 - 11:30', '<span class="bold has-text-danger">Spotlight Posters</span> & Coffee Break'],
+  ['inv-talk', '11:30 - 12:00', 'Invited Talk'],
+  ['spot-poster', '12:00 - 12:30', 'Invited Talk'],
   ['lunch-break', '12:30 - 13:30', 'Lunch Break'],
   ['inv-talk', '13:30 - 14:00', 'Invited Talk'],
-  ['spot-ppt', '14:00 - 15:00', 'Spotlight presentations'],
-  ['spot-poster', '15:00 - 15:30', 'Spotlight Posters | Muse 1'],
+  ['inv-talk', '14:00 - 14:30', 'Invited Talk'],
+  ['spot-ppt', '14:30 - 15:30', 'Spotlight presentations'],
   ['coffee-break', '15:30 - 16:00', 'Coffee Break'],
   ['inv-talk', '16:00 - 16:30', 'Invited Talk'],
-  ['disc', '16:30 - 17:30', 'Panel Discussion'], 
+  ['disc', '16:30 - 17:15', 'Panel Discussion'], 
 ]
