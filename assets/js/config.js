@@ -49,7 +49,7 @@ const schedule = [
   ['intro', '08:45 - 09:00', 'Introduction'],
   ['inv-talk', '09:00 - 09:30', 'Invited Talk'],
   ['inv-talk', '09:30 - 10:30', 'Spotlight Presentations'],
-  ['coffee-break', '10:30 - 11:30', '<span class="bold has-text-danger">Spotlight Posters</span> & Coffee Break'],
+  ['coffee-break', '10:30 - 11:30', '<span class="bold has-text-danger">Spotlight Posters (Muse 1)</span> & Coffee Break'],
   ['inv-talk', '11:30 - 12:00', 'Invited Talk'],
   ['spot-poster', '12:00 - 12:30', 'Invited Talk'],
   ['lunch-break', '12:30 - 13:30', 'Lunch Break'],
