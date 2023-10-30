@@ -66,7 +66,7 @@ function populate_accepted_presentations(html_id, details){
             <br>
             ${curr_detail[3]}, ${curr_detail[4]}
             <br>
-            <small class='bold has-text-dark'>${curr_detail[5]}</small>
+            <small class='bold has-text-dark'><i class='fa fa-clock icon'  style="position: relative;top: 5px;"></i>&nbsp;${curr_detail[7]} | ${curr_detail[5]}</small>
           </p>
         </div>
       </div>
